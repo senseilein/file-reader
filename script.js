@@ -1,6 +1,7 @@
-fetch('bookText.txt')
-  .then(response => response.text())
-  .then(text => console.log(text))
+const fs = require('fs');
 
+fs.readFile('bookText.txt', 'utf-8', (err, data) => {
+  if (err) throw err;
 
-  
+  console.log(data.toString());
+})
