@@ -1,7 +1,16 @@
 const fs = require('fs');
 
-fs.readFile('bookText.txt', 'utf-8', (err, data) => {
-  if (err) throw err;
+let text = fs.readFileSync("./bookText.txt").toString();
+let wordBySpace = text.split(" ");
+let str = 'and';
+let c = 0;
 
-  console.log(data.toString());
-})
+for(let i = 0; i < wordBySpace.length; i++){
+  if(wordBySpace[i].toLowerCase() === 'and'){
+    c++;
+  }
+}
+
+
+console.log(c);
+
