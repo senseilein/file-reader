@@ -11,5 +11,4 @@ for(i = 0; i < wordBySpace.length; i++){
     counter++;
   }
 }
-
 console.log(counter);
